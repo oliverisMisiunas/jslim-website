@@ -1,0 +1,55 @@
+$bg-dark: #222831;
+$teal: #00adb5;
+$dark-teal: #189399;
+$white: #eeeeee;
+$dark-white: #cfcfcf;
+$yellow: #ffef63;
+$dark-yellow: #dfd25e;
+$grey: #393e46;
+
+// Open-source what page
+
+.os-how {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 36px;
+    margin-top: 250px;
+    margin-bottom: 60px;
+    color: $white;
+  }
+
+  p {
+    font-size: 30px;
+    width: 70vw;
+    color: $white;
+    line-height: 1.5;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  #bottom-text {
+      text-align: center;
+  }
+
+  button {
+    width: 230px;
+    height: 4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    background-color: $yellow;
+    transition: background-color 0.1s linear;
+    margin-bottom: 150px;
+
+    &:hover {
+      background-color: $dark-yellow;
+    }
+  }
+}
