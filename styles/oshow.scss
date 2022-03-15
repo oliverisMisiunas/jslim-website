@@ -1,0 +1,51 @@
+$bg-dark: #222831;
+$teal: #00adb5;
+$dark-teal: #189399;
+$white: #eeeeee;
+$dark-white: #cfcfcf;
+$yellow: #ffef63;
+$dark-yellow: #dfd25e;
+$grey: #393e46;
+$red: #E41D35;
+
+.howtoos {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 36px;
+    color: $yellow;
+    margin-top: 250px;
+  }
+
+  p {
+    font-size: 30px;
+    color: $white;
+    line-height: 1.5;
+    width: 70vw;
+    margin-top: 60px;
+  }
+
+  ol {
+      color: $white;
+      font-size: 30px;
+      margin-top: 60px;
+      line-height: 1.5;
+  }
+
+  a {
+      color: $teal;
+      text-decoration: underline;
+  }
+
+  #stuck {
+      margin-top: 150px;
+      margin-bottom: 150px;
+  }
+
+  #stuck-span {
+      color: $red;
+  }
+}

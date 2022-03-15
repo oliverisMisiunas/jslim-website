@@ -6,8 +6,8 @@ export default function Bottom() {
   return (
     <div className='bottom'>
         <p>Oliveris Misiūnas</p>
-        <p id='middle-p-bot'><GrGithub /></p>
-        <p><BsLinkedin /></p>
+        <a id='middle-p-bot' href='https://github.com/oliverisMisiunas' target='_blank'><GrGithub /></a>
+        <a href='https://www.linkedin.com/in/oliveris-misiunas/' target='_blank'><BsLinkedin /></a>
     </div>
   )
 }

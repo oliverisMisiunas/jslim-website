@@ -1,5 +1,4 @@
 import React from 'react'
-import { FiCopy } from 'react-icons/fi';
 
 export default function Homefront() {
   return (
@@ -8,7 +7,7 @@ export default function Homefront() {
         <h1>Write less <span id='front-js'>JavaScript</span></h1>
 
         <div className="front-npm">
-            <p>npm i jslim-library <span><FiCopy /></span></p>
+            <p>npm i jslim-library</p>
         </div>
     </div>
   )

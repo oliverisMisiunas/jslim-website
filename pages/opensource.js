@@ -32,7 +32,7 @@ export default function opensource() {
           JavaScript?
         </p>
 
-        <Link href="/opensource">
+        <Link href="/howtoopensource">
           <button>How to contribute</button>
         </Link>
       </div>

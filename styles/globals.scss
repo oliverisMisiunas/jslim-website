@@ -84,6 +84,57 @@ a {
     .nav-active {
       color: $teal;
     }
+
+    .div-roll-out {
+      h2 {
+        cursor: default;
+
+        span {
+          transform: rotate(180deg);
+          transition: transform 0.2s ease-in;
+        }
+      }
+
+      .os-nav-active {
+        color: $white;
+        position: absolute;
+        background-color: $grey;
+        overflow: hidden;
+        font-size: 20px;
+        min-width: 195px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        height: 0px;
+        transition: height 0.2s ease-in;
+
+        h3 {
+          cursor: pointer;
+          transition: color 0.1s linear;
+
+          &:hover {
+            color: $dark-teal;
+          }
+        }
+      }
+
+      &:hover {
+
+        h2 {
+          color: $dark-teal;
+    
+            span {
+              transform: rotate(0deg);
+            }
+        }
+
+        .os-nav-active {
+          height: 150px;
+        }
+      }
+    }
   }
 }
 
@@ -289,6 +340,11 @@ a {
   background-color: $grey;
 
   p {
+    color: $white;
+    font-size: 20px;
+  }
+
+  a {
     color: $white;
     font-size: 20px;
   }
