@@ -12,7 +12,8 @@ export const docsData = [
     ],
     classes: ["jscrollto", "jsmooth", "jsetpx"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/scrollto.jpg']
   },
   {
     id: 2,
@@ -24,7 +25,8 @@ export const docsData = [
     ],
     classes: ["jhover"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/jhover.jpg']
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ export const docsData = [
     ],
     classes: ["jscrollpos"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/applyClassScrolling.jpg']
   },
   {
     id: 4,
@@ -50,7 +53,8 @@ export const docsData = [
     ],
     classes: ["jget"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/variableHTML.jpg', '/variableJS.jpg']
   },
   {
     id: 5,
@@ -62,7 +66,8 @@ export const docsData = [
     ],
     classes: ["jtoggle"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/jtoggle.jpg']
   },
   {
     id: 6,
@@ -74,7 +79,8 @@ export const docsData = [
     ],
     classes: ["jadd"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/jadd.jpg']
   },
   {
     id: 7,
@@ -84,7 +90,8 @@ export const docsData = [
     ],
     classes: ["jremove"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/jremove.jpg']
   },
   {
     id: 8,
@@ -97,7 +104,8 @@ export const docsData = [
     ],
     classes: ["jdate-mdy", "jdate-dmy", "jdate-ymd"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/displayDate.jpg']
   },
   {
     id: 9,
@@ -109,7 +117,8 @@ export const docsData = [
     ],
     classes: ["jfcol", "jfrow"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/centerElements.jpg']
   },
   {
     id: 10,
@@ -119,7 +128,8 @@ export const docsData = [
     ],
     classes: ["jscrolltop"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/scrolltoTop.jpg']
   },
   {
     id: 11,
@@ -133,6 +143,7 @@ export const docsData = [
     ],
     classes: ["jinput", "jinput-btn", "jinputArr"],
     version: "1.0.0",
-    author: 'Oliveris Misiūnas'
+    author: 'Oliveris Misiūnas',
+    photos: ['/inputHTML.jpg', '/inputJS.jpg']
   },
 ];
