@@ -1,0 +1,54 @@
+$bg-dark: #222831;
+$teal: #00adb5;
+$dark-teal: #189399;
+$white: #eeeeee;
+$dark-white: #cfcfcf;
+$yellow: #ffef63;
+$dark-yellow: #dfd25e;
+$grey: #393e46;
+
+@media (orientation: portrait) {
+
+.os-how {
+    margin-top: 180px;
+
+    h1 {
+        margin-top: 0px;
+        width: 90%;
+        text-align: center;
+    }
+
+    p {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    button {
+        margin-bottom: 80px;
+    }
+}
+
+.howtoos {
+
+    h1 {
+        margin-top: 180px;
+        width: 90%;
+        text-align: center;
+    }
+
+    p {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    ol {
+        width: 90%;
+        font-size: 24px;
+    }
+
+    #stuck {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+}

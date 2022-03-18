@@ -1,0 +1,125 @@
+$bg-dark: #222831;
+$teal: #00adb5;
+$dark-teal: #189399;
+$white: #eeeeee;
+$dark-white: #cfcfcf;
+$yellow: #ffef63;
+$dark-yellow: #dfd25e;
+$grey: #393e46;
+
+@media (orientation: portrait) {
+
+  .navbar {
+
+    #navbar-logo {
+        margin-left: 5%;
+    }
+
+    .navbar-nav {
+      display: none;
+    }
+
+    #nav-mob-fi {
+        display: block;
+        color: $white;
+        font-size: 42px;
+        margin: 0;
+        margin-right: 5%;
+        z-index: 2;
+    }
+
+    .nav-open-mob {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: $bg-dark;
+        transform: translateY(-70%);
+        transition: all 0.2s linear;
+        z-index: 1;
+
+        .h2s-nav-mob {
+            margin-top: 40%;
+
+            h2 {
+                font-size: 35px;
+                margin-top: 50px;
+                color: $white;
+                text-align: center;
+                transition: color 0.1s linear;
+
+                &:hover {
+                    color: $dark-teal;
+                }
+            }
+        }
+    }
+
+    .nav-open-mob-active {
+        transform: translateY(55%);
+    }
+  }
+
+  .homefront {
+    margin-top: 180px;
+    margin-bottom: 80px;
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+  }
+
+  .about-front {
+
+    h2 {
+        text-align: center;
+        line-height: 1.5;
+        width: 90%;
+    }
+
+    h3 {
+        width: 90%;
+        text-align: center;
+    }
+
+    .code-show {
+        width: 90%;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .about-btns {
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+
+        #how-btn {
+            margin-right: 0vw;
+            margin-bottom: 30px;
+        }
+
+        #class-btn {
+            margin-left: 0vw;
+        }
+    }
+    }
+
+    .contributefront {
+        margin-bottom: 80px;
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        p {
+            width: 90vw;
+            font-size: 26px;
+        }
+    }
+}

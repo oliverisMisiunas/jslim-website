@@ -5,7 +5,6 @@ import Navbar from "./global-components/Navbar";
 import Bottom from "./global-components/Bottom";
 
 export default function docs() {
-
   //Search bar
   const docsTitles = [];
   const docsClasses = [];
@@ -15,28 +14,27 @@ export default function docs() {
     docsClasses.push(docsData[i].classes);
   }
 
-
   function searchTrig(e) {
-    let inputValue = e.target.value.toLowerCase()
+    let inputValue = e.target.value.toLowerCase();
 
-    let cards = document.getElementsByClassName('classlist-card')
-    
+    let cards = document.getElementsByClassName("classlist-card");
+
     for (let i = 0; i < cards.length; i++) {
-      cards[i].classList.add('docs-list-hidden')
+      cards[i].classList.add("docs-list-hidden");
 
-      if (inputValue == '') {
-        cards[i].classList.remove('docs-list-hidden')
+      if (inputValue == "") {
+        cards[i].classList.remove("docs-list-hidden");
       }
     }
 
     for (let i = 0; i < docsTitles.length; i++) {
       if (docsTitles[i].includes(inputValue)) {
-        cards[i].classList.remove('docs-list-hidden')
+        cards[i].classList.remove("docs-list-hidden");
       }
 
       for (let j = 0; j < docsClasses[i].length; j++) {
         if (docsClasses[i][j].includes(inputValue)) {
-          cards[i].classList.remove('docs-list-hidden')
+          cards[i].classList.remove("docs-list-hidden");
         }
       }
     }
@@ -69,6 +67,13 @@ export default function docs() {
         desc1.classList.add("temp-p");
         classDescription[0].appendChild(desc1);
       }
+      for (let gj = 0; gj < howDocs.photos.length; gj++) {
+        let phot = document.createElement("img");
+        phot.src = howDocs.photos[gj];
+        phot.classList.add("temp-p");
+        phot.setAttribute("id", "doc-phot");
+        classImage[0].appendChild(phot);
+      }
     }
 
     for (let i = 1; i < docsData.length + 1; i++) {
@@ -95,28 +100,35 @@ export default function docs() {
     }
   }, [currentDoc]);
 
+
+
   return (
     <>
       <Navbar />
 
       <div className="docs-container">
-        <div className="all-docs">
-          <div className="docs-search">
-            <input
-              placeholder="Search"
-              id="doc-sear"
-              type="text"
-              onChange={searchTrig}
-            />
-          </div>
+        <div className="mob-btns-docs">
+          <h3>Menu</h3>
+          <h3>Search</h3>
+        </div>
 
-          <div className="docs-getstarted">
-            <p onClick={() => setCurrentDoc("howto")}>How to get started</p>
-          </div>
+        <div className="doccss">
+          <div className="all-docs">
+            <div className="docs-search">
+              <input
+                placeholder="Search"
+                id="doc-sear"
+                type="text"
+                onChange={searchTrig}
+              />
+            </div>
 
-          <div className="docs-classlist">
-            {
-              docsData.map((e) => {
+            <div className="docs-getstarted">
+              <p onClick={() => setCurrentDoc("howto")}>How to get started</p>
+            </div>
+
+            <div className="docs-classlist">
+              {docsData.map((e) => {
                 return (
                   <div className="classlist-p" key={"uniqueID" + e.id}>
                     <p
@@ -129,18 +141,18 @@ export default function docs() {
                     </p>
                   </div>
                 );
-              })
-            }
+              })}
+            </div>
           </div>
-        </div>
 
-        <div className="the-doc">
-          <h1 className="class-title"></h1>
-          <div className="class-description"></div>
-          <div className="class-image"></div>
-          <div className="smallinfo">
-            <p className="class-version"></p>
-            <p className="class-author"></p>
+          <div className="the-doc">
+            <h1 className="class-title"></h1>
+            <div className="class-description"></div>
+            <div className="class-image"></div>
+            <div className="smallinfo">
+              <p className="class-version"></p>
+              <p className="class-author"></p>
+            </div>
           </div>
         </div>
       </div>

@@ -49,3 +49,15 @@ $red: #E41D35;
       color: $red;
   }
 }
+
+
+@media (max-width: 1400px) {
+
+  .howtoos {
+  
+    p {
+      width: 90vw;
+    }
+}
+
+}

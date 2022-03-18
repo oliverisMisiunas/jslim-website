@@ -1,0 +1,52 @@
+$bg-dark: #222831;
+$teal: #00ADB5;
+$dark-teal: #189399;
+$white: #EEEEEE;
+$dark-white: #cfcfcf;
+$yellow: #FFEF63;
+$dark-yellow: #dfd25e;
+$grey: #393E46;
+
+@media (orientation: portrait) {
+    .docs-container {
+
+        .mob-btns-docs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 5%;
+            margin-right: 5%;
+            
+            h3 {
+                color: $teal;
+                font-size: 30px;
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+
+        .doccss {
+            margin-top: 0;
+    
+        .all-docs {
+            display: none;
+            transform: translateX(-100%);
+        }
+    
+        .the-doc {
+            width: 100vw;
+            // transform: translateX(100%);
+
+            h1 {
+                margin-top: 40px;
+                text-align: center;
+                width: 90%;
+            }
+
+            .class-description {
+                width: 90%;
+            }
+        }
+    }
+    }
+}
