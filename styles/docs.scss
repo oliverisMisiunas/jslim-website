@@ -75,6 +75,16 @@ $grey: #393E46;
                 }
             }
         }
+
+        .docs-search-results {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 80%;
+        }
+
+        .docs-list-hidden {
+            display: none;
+        }
     }
 
     .the-doc {
@@ -113,6 +123,14 @@ $grey: #393E46;
                 width: 500px;
                 border-radius: 5px;
             }
+        }
+
+        .smallinfo {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 70%;
         }
     }
 }

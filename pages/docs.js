@@ -6,47 +6,91 @@ import Bottom from "./global-components/Bottom";
 
 export default function docs() {
 
+  //Search bar
+  const docsTitles = [];
+  const docsClasses = [];
+
+  for (let i = 0; i < docsData.length; i++) {
+    docsTitles.push(docsData[i].title.toLowerCase());
+    docsClasses.push(docsData[i].classes);
+  }
+
+
+  function searchTrig(e) {
+    let inputValue = e.target.value.toLowerCase()
+
+    let cards = document.getElementsByClassName('classlist-card')
+    
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.add('docs-list-hidden')
+
+      if (inputValue == '') {
+        cards[i].classList.remove('docs-list-hidden')
+      }
+    }
+
+    for (let i = 0; i < docsTitles.length; i++) {
+      if (docsTitles[i].includes(inputValue)) {
+        cards[i].classList.remove('docs-list-hidden')
+      }
+
+      for (let j = 0; j < docsClasses[i].length; j++) {
+        if (docsClasses[i][j].includes(inputValue)) {
+          cards[i].classList.remove('docs-list-hidden')
+        }
+      }
+    }
+  }
+
+  //Display of list of classes
   const [currentDoc, setCurrentDoc] = useState("howto");
 
   useEffect(() => {
-    let tempP = document.getElementsByClassName('temp-p');
+    let tempP = document.getElementsByClassName("temp-p");
     if (tempP.length > 0) {
-        while (tempP.length > 0) {
-          tempP[0].remove()
-        }
+      while (tempP.length > 0) {
+        tempP[0].remove();
+      }
     }
 
     let classTitle = document.getElementsByClassName("class-title");
     let classDescription = document.getElementsByClassName("class-description");
-    let classImage = document.getElementsByClassName('class-image')
+    let classImage = document.getElementsByClassName("class-image");
     let classVersion = document.getElementsByClassName("class-version");
     let classAuthor = document.getElementsByClassName("class-author");
 
-    for (let i = 1; i < docsData.length + 1; i++) {
-      if (currentDoc === "howto") {
-        classTitle[0].textContent = howDocs.title;
-        // for (let jj = 0; jj < howDocs.text.length; j++) {
+    if (currentDoc === "howto") {
+      classVersion[0].textContent = "";
+      classAuthor[0].textContent = "";
+      classTitle[0].textContent = howDocs.title;
+      for (let jj = 0; jj < howDocs.text.length; jj++) {
+        let desc1 = document.createElement("p");
+        desc1.innerHTML = howDocs.text[jj];
+        desc1.classList.add("temp-p");
+        classDescription[0].appendChild(desc1);
+      }
+    }
 
-        // }
-        // let desc1 = document.createElement('p')
-        // desc1.innerHTML = howDocs.text
-        // desc1.classList.add('temp-p')
-        // classDescription[0].appendChild(desc1)
-      } else if (currentDoc === i) {
-        classTitle[0].textContent = docsData[i - 1].title
+    for (let i = 1; i < docsData.length + 1; i++) {
+      if (currentDoc === i) {
+        classTitle[0].textContent = docsData[i - 1].title;
         for (let j = 0; j < docsData[i - 1].text.length; j++) {
-            let desc = document.createElement('p')
-            desc.innerHTML = docsData[i - 1].text[j]
-            desc.classList.add('temp-p')
-            classDescription[0].appendChild(desc)
+          let desc = document.createElement("p");
+          desc.innerHTML = docsData[i - 1].text[j];
+          desc.classList.add("temp-p");
+          classDescription[0].appendChild(desc);
         }
         for (let yy = 0; yy < docsData[i - 1].photos.length; yy++) {
-          let phot = document.createElement('img')
-          phot.src = docsData[i - 1].photos[yy]
-          phot.classList.add('temp-p')
-          phot.setAttribute('id', 'doc-phot')
-          classImage[0].appendChild(phot)
+          let phot = document.createElement("img");
+          phot.src = docsData[i - 1].photos[yy];
+          phot.classList.add("temp-p");
+          phot.setAttribute("id", "doc-phot");
+          classImage[0].appendChild(phot);
         }
+        classVersion[0].textContent =
+          "Available on Jslim " + docsData[i - 1].version + " and up";
+        classAuthor[0].textContent =
+          "Class written by " + docsData[i - 1].author;
       }
     }
   }, [currentDoc]);
@@ -58,7 +102,12 @@ export default function docs() {
       <div className="docs-container">
         <div className="all-docs">
           <div className="docs-search">
-            <input id="doc-sear" type="text" />
+            <input
+              placeholder="Search"
+              id="doc-sear"
+              type="text"
+              onChange={searchTrig}
+            />
           </div>
 
           <div className="docs-getstarted">
@@ -66,19 +115,22 @@ export default function docs() {
           </div>
 
           <div className="docs-classlist">
-            {docsData.map((e) => {
-              return (
-                <div key={"uniqueID" + e.id}>
-                  <p
-                    onClick={() => setCurrentDoc(e.id)}
-                    key={e.id}
-                    id="doc-select"
-                  >
-                    {e.title}
-                  </p>
-                </div>
-              );
-            })}
+            {
+              docsData.map((e) => {
+                return (
+                  <div className="classlist-p" key={"uniqueID" + e.id}>
+                    <p
+                      onClick={() => setCurrentDoc(e.id)}
+                      key={e.id}
+                      id="doc-select"
+                      className="classlist-card"
+                    >
+                      {e.title}
+                    </p>
+                  </div>
+                );
+              })
+            }
           </div>
         </div>
 
@@ -86,8 +138,10 @@ export default function docs() {
           <h1 className="class-title"></h1>
           <div className="class-description"></div>
           <div className="class-image"></div>
-          <p className="class-version"></p>
-          <p className="class-author"></p>
+          <div className="smallinfo">
+            <p className="class-version"></p>
+            <p className="class-author"></p>
+          </div>
         </div>
       </div>
 
