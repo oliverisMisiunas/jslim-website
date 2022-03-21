@@ -25,44 +25,41 @@ $grey: #393E46;
             }
         }
 
-        .menu-mobile {
-            color: $white;
-            position: absolute;
-            
-        }
-
         .doccss {
             margin-top: 0;
-            // position: absolute;
 
     
         .all-docs {
             width: 100vw;
-            // transform: translateX(-100%);
         }
 
-        .all-docs-hidden {
-            opacity: 0;
+        #docs-inactive {
             display: none;
+        }
+
+        .all-docs-active {
+            transform: translateX(0%);
         }
     
         .the-doc {
             width: 100vw;
-            opacity: 1;
-            transition: opacity 0.1s linear;
-            // display: none;
-            // transform: translateX(100%);
 
-            button {
-                margin-top: 20px;
-                display: block;
-                border: 0;
-                border-bottom: 1px $yellow solid;
-                padding-bottom: 5px;
-                background-color: transparent;
-                color: $yellow;
-                font-family: 'Josefin Sans', sans-serif;
-                font-size: 30px;
+            .the-doc-btn {
+                width: 100%;
+
+                button {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    margin-left: 5%;
+                    display: block;
+                    border: 0;
+                    border-bottom: 1px $teal solid;
+                    padding-bottom: 5px;
+                    background-color: transparent;
+                    color: $teal;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 30px;
+                }
             }
 
             h1 {
@@ -74,12 +71,19 @@ $grey: #393E46;
             .class-description {
                 width: 90%;
             }
+
+            .class-image {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                
+                img {
+                    min-width: 90%;
+                    margin-bottom: 10px;
+                }
+            }
         }
         
-        .heyhey {
-            opacity: 0;
-        }
     }
     }
-
 }

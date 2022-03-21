@@ -101,12 +101,16 @@ export default function docs() {
   }, [currentDoc]);
 
   // Mobile menu
-  const [mobMenu, setMobMenu] = useState('');
-  const [mobDocs, setMobDocs] = useState('all-docs-hidden')
+  const [mobDoc, setMobDoc] = useState("docs-inactive");
+  const [mobDocList, setMobDocList] = useState("");
 
-  function mobDocMen() {
-    if (mobMenu === '') {
-      setMobMenu('heyhey')
+  function listChange() {
+    if (mobDocList === "") {
+      setMobDocList("docs-inactive");
+      setMobDoc("");
+    } else {
+      setMobDoc("docs-inactive");
+      setMobDocList("");
     }
   }
 
@@ -115,17 +119,8 @@ export default function docs() {
       <Navbar />
 
       <div className="docs-container">
-        {/* <div className="mob-btns-docs">
-          <h3>Menu</h3>
-          <h3>Search</h3>
-        </div> */}
-
-        {/* <div className="menu-mobile">
-          <h1>heyyy</h1>
-        </div> */}
-
         <div className="doccss">
-          <div className={"all-docs" + mobDocs}>
+          <div className="all-docs" id={mobDoc}>
             <div className="docs-search">
               <input
                 placeholder="Search"
@@ -136,7 +131,14 @@ export default function docs() {
             </div>
 
             <div className="docs-getstarted">
-              <p onClick={() => setCurrentDoc("howto")}>How to get started</p>
+              <p
+                onClick={() => {
+                  setCurrentDoc("howto");
+                  listChange();
+                }}
+              >
+                How to get started
+              </p>
             </div>
 
             <div className="docs-classlist">
@@ -144,7 +146,10 @@ export default function docs() {
                 return (
                   <div className="classlist-p" key={"uniqueID" + e.id}>
                     <p
-                      onClick={() => setCurrentDoc(e.id)}
+                      onClick={() => {
+                        setCurrentDoc(e.id);
+                        listChange();
+                      }}
                       key={e.id}
                       id="doc-select"
                       className="classlist-card"
@@ -157,8 +162,10 @@ export default function docs() {
             </div>
           </div>
 
-          <div className={"the-doc " + mobMenu}>
-            <button onClick={mobDocMen}>Menu</button>
+          <div className="the-doc" id={mobDocList}>
+            <div className="the-doc-btn">
+              <button onClick={listChange}>Menu</button>
+            </div>
             <h1 className="class-title"></h1>
             <div className="class-description"></div>
             <div className="class-image"></div>
