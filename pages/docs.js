@@ -100,20 +100,32 @@ export default function docs() {
     }
   }, [currentDoc]);
 
+  // Mobile menu
+  const [mobMenu, setMobMenu] = useState('');
+  const [mobDocs, setMobDocs] = useState('all-docs-hidden')
 
+  function mobDocMen() {
+    if (mobMenu === '') {
+      setMobMenu('heyhey')
+    }
+  }
 
   return (
     <>
       <Navbar />
 
       <div className="docs-container">
-        <div className="mob-btns-docs">
+        {/* <div className="mob-btns-docs">
           <h3>Menu</h3>
           <h3>Search</h3>
-        </div>
+        </div> */}
+
+        {/* <div className="menu-mobile">
+          <h1>heyyy</h1>
+        </div> */}
 
         <div className="doccss">
-          <div className="all-docs">
+          <div className={"all-docs" + mobDocs}>
             <div className="docs-search">
               <input
                 placeholder="Search"
@@ -145,7 +157,8 @@ export default function docs() {
             </div>
           </div>
 
-          <div className="the-doc">
+          <div className={"the-doc " + mobMenu}>
+            <button onClick={mobDocMen}>Menu</button>
             <h1 className="class-title"></h1>
             <div className="class-description"></div>
             <div className="class-image"></div>
@@ -157,7 +170,9 @@ export default function docs() {
         </div>
       </div>
 
-      <Bottom />
+      <div className="bottom-mob">
+        <Bottom />
+      </div>
     </>
   );
 }

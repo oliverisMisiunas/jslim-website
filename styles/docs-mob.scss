@@ -25,20 +25,48 @@ $grey: #393E46;
             }
         }
 
+        .menu-mobile {
+            color: $white;
+            position: absolute;
+            
+        }
+
         .doccss {
             margin-top: 0;
+            // position: absolute;
+
     
         .all-docs {
+            width: 100vw;
+            // transform: translateX(-100%);
+        }
+
+        .all-docs-hidden {
+            opacity: 0;
             display: none;
-            transform: translateX(-100%);
         }
     
         .the-doc {
             width: 100vw;
+            opacity: 1;
+            transition: opacity 0.1s linear;
+            // display: none;
             // transform: translateX(100%);
 
+            button {
+                margin-top: 20px;
+                display: block;
+                border: 0;
+                border-bottom: 1px $yellow solid;
+                padding-bottom: 5px;
+                background-color: transparent;
+                color: $yellow;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 30px;
+            }
+
             h1 {
-                margin-top: 40px;
+                margin-top: 30px;
                 text-align: center;
                 width: 90%;
             }
@@ -47,6 +75,11 @@ $grey: #393E46;
                 width: 90%;
             }
         }
+        
+        .heyhey {
+            opacity: 0;
+        }
     }
     }
+
 }
