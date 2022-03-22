@@ -1,5 +1,6 @@
 import React from "react";
 import Head from 'next/head'
+import Link from "next/link";
 import Navbar from "./global-components/Navbar";
 import Bottom from "./global-components/Bottom";
 
@@ -35,7 +36,7 @@ export default function howtoopensource() {
         <p>
           The first way is to think of what JavaScript code could be shortened
           by just writing an HTML class. I would recommend taking a look at{" "}
-          <a href="/docs" rel="noreferrer">JSlim classes</a> first, just to get a better understanding
+          <Link href='/docs'>JSlim classes</Link> first, just to get a better understanding
           of what are and how they work, and if your idea isn’t already
           implemented. It might also help you to get into the right head-space
           to think of new ideas. After that, you should take a look at the <a href="https://github.com/oliverisMisiunas/jslim-library/blob/master/index.js" target='_blank' rel="noreferrer">source code</a> to familiarize yourself with the JSlim
