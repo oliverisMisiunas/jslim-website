@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Aboutfront() {
   return (
@@ -78,8 +79,9 @@ export default function Aboutfront() {
       </h3>
 
       <div className="about-btns">
+        <Link href='/docs'>  
           <button id="how-btn">How to get started</button>
-          <button id="class-btn">JSlim classes</button>
+        </Link>
       </div>
     </div>
   );

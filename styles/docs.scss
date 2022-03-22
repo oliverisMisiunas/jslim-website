@@ -11,15 +11,7 @@ $grey: #393E46;
     width: 100vw;
     margin-top: 100px;
     display: flex;
-    flex-direction: column;
-
-    .mob-btns-docs {
-        display: none;
-    }
-
-    .doccss {
-        display: flex;
-        flex-direction: row;
+    flex-direction: row;
 
     .all-docs {
         width: 25%;
@@ -139,7 +131,7 @@ $grey: #393E46;
         }
     }
 }
-}
+
 
 @media (max-width: 1400px) {
 

@@ -9,25 +9,6 @@ $grey: #393E46;
 
 @media (orientation: portrait) {
     .docs-container {
-
-        .mob-btns-docs {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-left: 5%;
-            margin-right: 5%;
-            
-            h3 {
-                color: $teal;
-                font-size: 30px;
-                margin: 0;
-                margin-top: 20px;
-            }
-        }
-
-        .doccss {
-            margin-top: 0;
-
     
         .all-docs {
             width: 100vw;
@@ -86,4 +67,3 @@ $grey: #393E46;
         
     }
     }
-}

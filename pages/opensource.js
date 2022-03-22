@@ -1,4 +1,5 @@
 import React from "react";
+import Head from 'next/head'
 import Link from "next/link";
 import Navbar from "./global-components/Navbar";
 import Bottom from "./global-components/Bottom";
@@ -6,6 +7,12 @@ import Bottom from "./global-components/Bottom";
 export default function opensource() {
   return (
     <>
+      <Head>
+        <title>JSlim Open-source</title>
+        <meta name="description" content="About JSlim Open-source" />
+        <link rel="icon" href="/favicon.png" />
+      </Head> 
+
             <Navbar />
       <div className="os-how">
 
