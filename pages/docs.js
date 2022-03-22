@@ -7,7 +7,7 @@ import Bottom from "./global-components/Bottom";
 import AllDocs from "./docs-components/AllDocs";
 import TheDoc from "./docs-components/TheDoc";
 
-export default function docs() {
+export default function Docs() {
   //Display of list of classes
   const [currentDoc, setCurrentDoc] = useState("howto");
 
