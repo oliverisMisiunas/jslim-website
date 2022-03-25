@@ -1,0 +1,25 @@
+$yellow: #FFEF63;
+$dark-yellow: #dfd25e;
+
+.hof {
+
+    .people {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            font-size: 36px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: $yellow;
+            transition: color 0.2s linear;
+
+            &:hover {
+                color: $dark-yellow;
+            }
+        }
+    }
+}

@@ -27,6 +27,9 @@ export default function Navbar() {
         <Link href="/docs">
           <h2 id="nav-docs">Docs</h2>
         </Link>
+        <Link href="/pageoffame">
+          <h2 id="pof">Page of Fame</h2>
+        </Link>
         <div className="div-roll-out">
           <h2 id="nav-os">
             Open-source{" "}
@@ -60,6 +63,9 @@ export default function Navbar() {
           <Link href="/opensource">
             <h2>Open-source</h2>
           </Link>
+          <Link href="/pageoffame">
+          <h2>Page of Fame</h2>
+        </Link>
           <Link href="/howtoopensource">
             <h2>How to contribute</h2>
           </Link>

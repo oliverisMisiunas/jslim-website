@@ -5,6 +5,7 @@ import '../styles/docs.scss'
 import '../styles/global-mob.scss'
 import '../styles/osmob.scss'
 import '../styles/docs-mob.scss'
+import '../styles/hof.scss'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
