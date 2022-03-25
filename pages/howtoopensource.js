@@ -49,8 +49,9 @@ export default function howtoopensource() {
           <li>
             Fork <a target='_blank' href="https://github.com/oliverisMisiunas/jslim-library" rel="noreferrer">Jslim GitHub repo</a>.
           </li>
-          <li>Create a <span id="teal-color">.js</span> file in <span id="teal-color">src/modules</span> and name it after your class name. Please make sure to <span id="teal-color">capitalize</span> the file name!</li>
-          <li>After writing the code for your class please wrap it in a function <span id="teal-color">(make sure that the function name starts with a capital letter)</span> and <span id="teal-color">export</span> that function by writing <span id="teal-color">export default YOURFUNCTIONNAME</span> at the bottom of your file. If this step is still unclear to you, I would advise taking a look at other classes to see how they are written and exported.</li>
+          <li>Create a folder named after your class in <span id="teal-color">src/modules</span>.</li>
+          <li>Create a <span id="teal-color">.js</span> file and name it after your class name. Please make sure to <span id="teal-color">capitalize</span> the file name! Write the code for your JSlim class in that folder.</li>
+          <li>After writing the code for your class wrap it in a function <span id="teal-color">(make sure that the function name starts with a capital letter)</span> and <span id="teal-color">export</span> that function by writing <span id="teal-color">export default YOURFUNCTIONNAME</span> at the bottom of your file. If this step is still unclear to you, I would advise taking a look at other classes to see how they are written and exported.</li>
           <li>Make a Pull Request.</li>
         </ol>
 
