@@ -146,4 +146,15 @@ export const docsData = [
     author: 'Oliveris Misiūnas',
     photos: ['/inputHTML.jpg', '/inputJS.jpg']
   },
+    {
+    id: 12,
+    title: "Scroll to the bottom",
+    text: [
+      "Apply the <span id='teal-color'>jscrollbottom</span> class to an element. When that element is clicked, the page will scroll to the bottom automatically."
+    ],
+    classes: ["jscrollbottom"],
+    version: "1.2.0",
+    author: 'Harry Whorlow',
+    photos: ['/scrollBottom.jpg']
+  },
 ];
